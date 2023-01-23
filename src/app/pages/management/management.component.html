@@ -1,0 +1,34 @@
+<div class="background">
+<div class="management">    
+    <div class="management-title">Creación/edición de productos</div>
+    <div class="management-body">
+        <div class="management-body-form">
+            
+                <form class="management-body-form-fields" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                    <label class="management-body-form-label">Nombre del producto:</label>
+                    <input class="management-body-form-input" formControlName="name" placeholder="Por ej: Tiesto para planta"/>
+                    <label class="management-body-form-label">Precio:</label>
+                    <input class="management-body-form-input" formControlName="price" placeholder="Por ej: 9.50"/>
+                    <label class="management-body-form-label">Descripción:</label>
+                    <input class="management-body-form-input" formControlName="description" placeholder="Por ej: Lo más vendido este mes"/>
+                    <label class="management-body-form-label">Ruta de la imagen:</label>
+                    <input class="management-body-form-input" formControlName="image" placeholder="Por ej: http://blabla.com/img.jpg"/>
+                    <label class="management-body-form-label">Opiniones:</label>
+                    <input class="management-body-form-input" formControlName="stars" placeholder="Por ej: 4.28"/>
+                    <button [disabled]="productForm.pristine || productForm.invalid"  class ="btnsave" type="submit">Guardar</button>                    
+                </form>                
+            
+            <div class="management-body-form-button">
+             
+            </div>
+        
+        </div>
+        <div class="management-body-vetrline"></div>
+    
+        <div class="management-body-newproduct">
+            <app-single-product [product]="newProduct"></app-single-product>
+        </div>
+    </div>
+  
+</div>
+</div>

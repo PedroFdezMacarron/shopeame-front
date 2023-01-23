@@ -1,0 +1,23 @@
+.btnicon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 56px;
+    width: 100px;
+    border-radius: 10px;
+    
+
+}
+.imgicon{
+    width: 25px;
+    height: 25px;
+    object-fit: scale-down;
+}
+
+.btnicon:hover{
+background: #EBF2FF4D;
+}
+a{
+    text-decoration: none;
+}

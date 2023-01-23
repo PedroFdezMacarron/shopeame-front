@@ -1,0 +1,34 @@
+<div class="background">
+<div class="bodygeneral">
+    <div class="headproducts">
+        <div class="titleproducts">Listado de productos({{tot}})</div>        
+        <div class="buttonsproducts">
+            <img *ngIf="view" (click)="changeView()" class="btn2" src="../../../assets/table.png" alt="grid"/>
+            <img *ngIf="!view" (click)="changeView()" class="btn2" src="../../../assets/grid.png" alt="row"/>            
+        </div>
+ 
+    </div>
+           <div class="search">
+            <input type="text" #filtro (input)="filtrar(filtro.value)" placeholder="buscador"/>
+        </div>
+    <div *ngIf="view" class="products">
+        <div *ngFor="let product of viewProducts">
+            <app-single-product [product]="product"></app-single-product>
+        </div>
+    </div>
+    <div *ngIf="!view" class="productslist">    
+        <div *ngFor="let product of viewProducts">
+            <div class="lineofproduct">
+                <span>Id:</span><div>{{product.id}}</div>
+                <span>Name:</span><div>{{product.name}}</div>
+                <span>Price:</span><div>{{product.price}}</div>
+                <span>Description:</span><div>{{product.description}}</div>
+                <img class="imgline" src="{{product.image}}" alt="{{product.name}}"/>            
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+</div>
+

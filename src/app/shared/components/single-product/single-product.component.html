@@ -1,0 +1,19 @@
+<div class="item"  (mouseenter)="showDetails()" (mouseleave)="showDetails()" >  
+    <div class="nameoff" *ngIf="!showdetails">{{product.name}}</div>  
+    <div class="nameon" *ngIf="showdetails">{{product.name}}</div>  
+    <img class="imgproduct" src="{{product.image}}" alt="{{product.name}}"/>
+    <div class="desc">{{product.description}}</div>
+    <div class="price">${{product.price}}</div>   
+    <div class="productfoot">
+        
+        <!-- <p-rating class="rating"  [(ngModel)]="product.stars">{{product.stars}}</p-rating> -->
+        <div class="stars">
+            <app-stars [stars]="product.stars"></app-stars><span>{{product.stars}}</span>
+        </div>
+
+        <button class="btnEdit" (click)="editProduct()">Editar</button>
+    </div>
+</div>
+
+
+    

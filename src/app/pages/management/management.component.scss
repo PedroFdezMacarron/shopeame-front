@@ -1,0 +1,73 @@
+.background {
+    background: #CCCCCC;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.management{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1200px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 50px;
+   
+    display: flex;
+    flex-direction: column;
+    &-title{        
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        /* Dark Color */
+        color: rgba(0, 0, 0, 0.87);
+        padding-left: 50px;
+        padding-top: 40px;
+    }
+    &-body{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        gap:50px;
+        &-form{
+            width: 75%;
+            display: flex;            
+            border-right: 1px solid #F89F21;
+            &-fields{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                gap: 0px;                
+            }
+            &-label{
+                height: 30px; 
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;               
+            }
+            &-input{
+                height: 30px;                
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+        }
+        &-newproduct{
+            width: 50%;
+        }
+    }
+}
+
+.btnsave{   
+    box-sizing: border-box;
+    background: #F89F21;
+    border: 1px solid #F89F21;
+    border-radius: 4px;
+    width: 120px;
+    height: 35px;
+    position: relative;
+    left: 450px;
+}
